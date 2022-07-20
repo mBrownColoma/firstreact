@@ -18,6 +18,6 @@
         "id":4,
         "titulo":"Tarea 4",
         "descripcion": "texto de la tarea 4",
-        "estado": true
+        "estado": false
     }
 ]
