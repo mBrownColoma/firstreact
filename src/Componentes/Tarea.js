@@ -4,7 +4,7 @@ class Tarea extends Component{
     TareaHecha(){
         return{
             fontSize:'20px',
-            color: this.props.tarea.estado ? 'gray':'black',
+            color: this.props.tarea.estado ? 'gray':'#D1C5FC',
             textDecoration: this.props.tarea.estado ? 'line-through':'none'
         }
     }
