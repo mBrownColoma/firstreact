@@ -1,25 +1,19 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
+import { Component } from 'react';
+import Tareas from './Componentes/Tareas';
 import './App.css';
+import tareas from './Datos/tareas.json'
+console.log(tareas)
+class App extends Component {
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Empezando con react
-        </a>
-      </header>
+  state = {
+    tareas: tareas
+  }
+  render() {
+    return<div>
+      <Tareas tareas={this.state.tareas}/>
     </div>
-  );
+  }
 }
 
 export default App;
