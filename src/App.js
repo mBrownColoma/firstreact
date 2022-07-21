@@ -10,9 +10,15 @@ class App extends Component {
   state = {
     tareas: tareas
   }
+
+  agregarTarea = (titulo, descripcion) =>{
+    console.log(titulo, descripcion)
+  }
+  
   render() {
+    
     return<div>
-      <FormularioTarea></FormularioTarea>
+      <FormularioTarea agregarTarea = {this.agregarTarea()}/>
       <Tareas tareas={this.state.tareas}/>
     </div>
   }

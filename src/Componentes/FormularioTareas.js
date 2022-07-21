@@ -9,6 +9,8 @@ class FormularioTarea extends Component{
 
     onSubmit = (e) => {
         e.preventDefault(); 
+        console.log(this.state);
+        this.agregarTarea('titulo 1', 'descripcion 1');
     }
 
     onChange = (e)=>{
@@ -19,6 +21,8 @@ class FormularioTarea extends Component{
     }
 
     render(){
+        // this.props.agregarTarea('titulo1', 'descripcion 1');
+        console.log(this.props);
         return(
             <form onSubmit={this.onSubmit}>
                 <input type="text" name="titulo" value={this.state.titulo} onChange={this.onChange} placeholder="Ingrese el titulo"></input><br/>
