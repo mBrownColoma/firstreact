@@ -3,6 +3,7 @@ import { Component } from 'react';
 import Tareas from './Componentes/Tareas';
 import './App.css';
 import tareas from './Datos/tareas.json'
+import FormularioTarea from './Componentes/FormularioTareas';
 console.log(tareas)
 class App extends Component {
 
@@ -11,6 +12,7 @@ class App extends Component {
   }
   render() {
     return<div>
+      <FormularioTarea></FormularioTarea>
       <Tareas tareas={this.state.tareas}/>
     </div>
   }
