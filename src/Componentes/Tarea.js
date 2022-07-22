@@ -4,8 +4,8 @@ class Tarea extends Component{
     TareaHecha(){
         return{
             fontSize:'20px',
-            color: this.props.tarea.estado ? 'gray':'#D1C5FC',
-            textDecoration: this.props.tarea.estado ? 'line-through':'none'
+            color: this.props.tarea.estado ? '#D1C5FC':'gray',
+            textDecoration: this.props.tarea.estado ? 'none':'line-through'
         }
     }
     render(){
@@ -22,8 +22,8 @@ class Tarea extends Component{
             {this.props.tarea.titulo} -
             {this.props.tarea.descripcion} -
             {this.props.tarea.id}
-            <input type="checkbox"></input>
-            <button style={btnBorrar}>X</button> 
+            <input type="checkbox" onChange={this.props.marcarHecho.bind(this,this.props.tarea.id)}></input>
+            <button style={btnBorrar} onClick={this.props.borrarTarea.bind(this,this.props.tarea.id)}>X</button> 
         </div>
     }
 
